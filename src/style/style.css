@@ -48,6 +48,7 @@ html {
 .flex {
     display: flex;
 }
+/*HEADER*/
 
 .header-container {
     padding: 50px 100px;
@@ -69,6 +70,15 @@ html {
 .header__nav-link:not(:last-child) {
     margin-right: 32px;
 }
+.header__burger-btn {
+  display: none;
+}
+.header__burger-menu-list {
+  display: none;
+}
+
+/*HERO*/
+
 .hero {
   background-color: #F6F8FB;
 }
@@ -124,12 +134,13 @@ html {
 }
 
 
+/*FEATURES*/
+
 .features-container {
   margin-bottom: 85px;
 }
 .fuatures__tabs-list {
   border-bottom: 1px solid #E1E1E1;
-  
 }
 
 .features__tabs-item:not(:last-child) {
@@ -154,6 +165,9 @@ html {
 .features__tabs-text {
   width: 55%;
 }
+
+/*BENEFITS*/
+
 .benefits {
   margin-bottom: 85px;
 }
@@ -179,6 +193,7 @@ html {
   line-height: 28px;
 }
 
+/*FOOTER*/
 .footer {
   background-color: rgba(66, 74, 87, 0.5);
 }
@@ -205,6 +220,8 @@ html {
 .footer__social-link svg:hover path {
   fill: white;
 }
+
+/*MEDIA ADAPTIV*/
 
 @media screen and (max-width: 1024px) {
   .container {
@@ -248,6 +265,68 @@ html {
   .container {
     max-width: 738px;
     padding: 20px 15px;
+  }
+  .header__burger-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  .header__burger-btn span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    transition: all .5s;
+  }
+  .header__burger-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+  .header__burger-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+  .header__burger-btn.active-burger span:nth-of-type(1) {
+    display: none;
+  }
+  .header__burger-btn.active-burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+  .header__burger-btn.active-burger span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+  .header__burger-menu-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 76px;
+    padding: 15px;
+    margin: 0;
+    background-color: rgba(0, 150, 167, .9);
+    transform: translateX(-100%);
+    transition: translateX 5s;
+  }
+  
+  .header__burger-menu-list.active-burger {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 100px;
+    transform: translateX(0%);
+  }
+  .header__burger-menu-item {
+    margin-right: 15px;
+    color: white;
+  }
+  .header__nav-list {
+    display: none;
   }
   .benefits__title {
     font-size: 36px;
