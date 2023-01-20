@@ -1,11 +1,12 @@
 const swiper = new Swiper('.swiper', {
     slidesPerView: 'auto',
-    autoplay: {
-		delay: 6000,
-	},
+    // autoplay: {
+	// 	delay: 6000,
+	// },
 
     pagination: {
         el: '.swiper-pagination',
+		clickable: true,
     },
 
 });

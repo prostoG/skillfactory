@@ -205,3 +205,60 @@ html {
 .footer__social-link svg:hover path {
   fill: white;
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 924px;
+    padding: 50px 50px;
+  }
+  .header__nav-list {
+    font-size: 16px;
+  }
+  .swiper-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .hero__header {
+    font-size: 36px;
+  }
+  .hero__text {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .swiper-pagination-bullet {
+    display: none;
+  }
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits__cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 738px;
+    padding: 20px 15px;
+  }
+  .benefits__title {
+    font-size: 36px;
+  }
+  .features-container {
+    margin-bottom: 0;
+}
+  .features__tabs-text {
+    width: 100%;
+  }
+  .footer-container {
+    align-items: center;
+  }
+}
